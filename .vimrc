@@ -76,6 +76,10 @@ nnoremap <silent> <C-PageUp> :bn<CR>
 nnoremap <silent> <C-PageDown> :bp<CR>
 nnoremap <silent> <C-w> :bd<CR>
 
-set guifont=Monaco:h12
+if has('mac')
+	set guifont=Monaco:h12
+else
+	set guifont=Monospace\ 10
+endif
 colorscheme hybrid
 let g:airline_theme='zenburn'
