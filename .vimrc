@@ -65,6 +65,8 @@ set backspace=indent,eol,start
 
 
 noremap <Leader>n :NERDTreeToggle<CR>
+imap <C-S-p> <C-o>:CtrlPMRU<CR>
+nmap <C-S-p> :CtrlPMRU<CR>
 
 imap <C-s> <C-o>:w<CR>
 map <C-s> <Esc>:w<CR>
