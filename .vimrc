@@ -1,5 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+let mapleader = '\'
+let maplocalleader = '\'
+:set timeout timeoutlen=1000 ttimeoutlen=1000
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -14,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,8 +43,10 @@ filetype plugin indent on    " required
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
-" Misc configuration
+" Indent guides
+let g:indent_guides_start_level = 2
 
+" Misc configuration
 set ts=4 sw=4 noexpandtab
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 noexpandtab
 autocmd FileType scala setlocal sw=2 ts=2 noexpandtab
@@ -58,6 +64,8 @@ set ic
 set backspace=indent,eol,start
 
 
+noremap <Leader>n :NERDTreeToggle<CR>
+
 imap <C-s> <C-o>:w<CR>
 map <C-s> <Esc>:w<CR>
 
@@ -67,5 +75,5 @@ nnoremap <silent> <C-PageDown> :bp<CR>
 nnoremap <silent> <C-w> :bd<CR>
 
 set guifont=Monaco:h12
-colorscheme zenburn
+colorscheme hybrid
 let g:airline_theme='zenburn'
