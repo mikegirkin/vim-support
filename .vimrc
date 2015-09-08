@@ -19,6 +19,7 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'VimClojure'
+Plugin 'luochen1990/rainbow'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,7 +46,10 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
 " Indent guides
-let g:indent_guides_start_level = 2
+let g:indent_guides_start_level = 1
+
+set fdm=indent
+au BufRead * normal zR
 
 " Misc configuration
 set ts=4 sw=4 noexpandtab
@@ -60,6 +64,7 @@ set list
 set listchars=tab:>.
 syntax on
 set hlsearch
+set incsearch
 set nu
 set ic
 set backspace=indent,eol,start
@@ -82,5 +87,5 @@ if has('mac')
 else
 	set guifont=Monospace\ 10
 endif
-colorscheme wombat256
+colorscheme hybrid
 let g:airline_theme='zenburn'
