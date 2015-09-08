@@ -18,6 +18,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'VimClojure'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,5 +82,5 @@ if has('mac')
 else
 	set guifont=Monospace\ 10
 endif
-colorscheme hybrid
+colorscheme wombat256
 let g:airline_theme='zenburn'
