@@ -19,6 +19,7 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'VimClojure'
+Plugin 'kien/rainbow_parentheses.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,7 +80,7 @@ map <C-s> <Esc>:w<CR>
 nnoremap <silent> <C-Tab> :bn<CR>
 nnoremap <silent> <C-PageUp> :bn<CR>
 nnoremap <silent> <C-PageDown> :bp<CR>
-nnoremap <silent> <C-w> :bd<CR>
+" nnoremap <silent> <C-w> :bd<CR>
 
 if has('mac')
 	set guifont=Monaco:h12
@@ -87,4 +88,4 @@ else
 	set guifont=Monospace\ 10
 endif
 colorscheme hybrid
-let g:airline_theme='zenburn'
+let g:airline_theme='hybrid'
